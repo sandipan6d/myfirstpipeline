@@ -1,0 +1,11 @@
+stage 'Test'
+node {
+    refresh_workspace()
+    cd ${WORKSPACE}
+    echo 'Hello from Jenkins'
+
+}
+
+refresh_workspace() {
+env.WORKSPACE=`pwd`
+}
